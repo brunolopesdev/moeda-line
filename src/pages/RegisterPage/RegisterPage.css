@@ -1,0 +1,132 @@
+input[type="email"],
+input[type="name"],
+input[type="password"],
+input[type="confirmPassword"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.register-container {
+  margin: 0 auto;
+  width: 60%;
+  padding: 16px;
+  background-color: #f2f2f2;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.fb {
+  margin: 2px;
+
+  background-color: #3b5998;
+  color: white;
+}
+
+.twitter {
+  margin: 2px;
+
+  background-color: #55acee;
+  color: white;
+}
+
+.google {
+  margin: 2px;
+  background-color: #dd4b39;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+
+.col {
+  max-width: 100%;
+  display: flex;
+  padding: 20px 50px;
+  margin-top: 6px;
+}
+
+.titulo {
+  font-size: 50px;
+  text-align: center;
+  color: #4a5257;
+}
+
+.span {
+  color: #e7d640;
+}
+
+span.error {
+  color: rgb(255, 7, 74);
+  font-size: 14px;
+}
+
+.bar {
+  width: 59%;
+  padding: 10px;
+  margin: 10px;
+  color: #333;
+  background: #fafafa;
+  border: 1px solid #ccc;
+}
+
+.success-msg {
+  text-align: center;
+  color: #2b7515;
+  font-size: 18px;
+  background: #ecffd6;
+  border: 1px solid #617c42;
+}
+
+.error-msg {
+  text-align: center;
+  color: #ba3939;
+  font-size: 18px;
+  background: #ffe0e0;
+  border: 1px solid #a33a3a;
+}
+
+@media screen and (max-width: 768px) {
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .bar {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register-container {
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+}
