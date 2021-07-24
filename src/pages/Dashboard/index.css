@@ -62,7 +62,7 @@
   grid-template-areas: "sidebar nav nav nav" "sidebar main main main";
 }
 
-@media only screen and (max-width:1024px){
+@media only screen and (max-width:1330px){
   .container-dashboard{
   grid-template-columns: 1fr;
   grid-template-rows: 0.2fr 3fr;
