@@ -13,9 +13,9 @@ import {
 } from "../StyledComponents"
 import { FaBars } from "react-icons/fa"
 import { useContext } from "react"
-import Logo from "@/assets/logo.png"
-import AuthContext from "@/Context/AuthContext"
-import Logout from "@/components/Logout/Logout"
+import Logo from "../../assets/logo.png"
+import AuthContext from "../../Context/AuthContext"
+import Logout from "../../components/Logout/Logout"
 
 const Navbar = ({ toggle }) => {
 

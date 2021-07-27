@@ -1,9 +1,9 @@
 import { useContext } from "react"
-import { useGetCotations, useGeoLocation } from "@/hooks/"
-import { TableLast } from "@/components/Table/Table"
-import hello from "@/assets/hello3.svg"
-import wallet from "@/assets/wallet.svg"
-import AuthContext from "@/Context/AuthContext"
+import { useGetCotations, useGeoLocation } from "../../../hooks/"
+import { TableLast } from "../../../components/Table/Table"
+import hello from "../../../assets/hello3.svg"
+import wallet from "../../../assets/wallet.svg"
+import AuthContext from "../../../Context/AuthContext"
 import "./Main.css"
 
 const Main = () => {

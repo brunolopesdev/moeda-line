@@ -1,9 +1,9 @@
 import { useState } from "react"
-import Sidebar from "@/pages/Dashboard/sidebar/Sidebar"
-import Navbar from "@/pages/Dashboard/navbar/Navbar"
-import { Table } from "@/components/Table/Table"
+import Sidebar from "../../pages/Dashboard/sidebar/Sidebar"
+import Navbar from "../../pages/Dashboard/navbar/Navbar"
+import { Table } from "../../components/Table/Table"
 import "./index.css"
-import { useGetTransactions } from "@/hooks"
+import { useGetTransactions } from "../../hooks"
 
 const Dashboard = () => {
 

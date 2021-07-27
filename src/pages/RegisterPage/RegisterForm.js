@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useFormik } from "formik"
-import { FieldContainer, Container, ErrorMsg, SucessMsg, RegisterBar } from "@/components/StyledComponents"
-import { CustomButton } from "@/components/Buttons/Button"
+import { FieldContainer, Container, ErrorMsg, SucessMsg, RegisterBar } from "../../components/StyledComponents"
+import { CustomButton } from "../../components/Buttons/Button"
 import * as yup from "yup"
-import api from "@/services/api"
+import api from "../../services/api"
 
 
 const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/

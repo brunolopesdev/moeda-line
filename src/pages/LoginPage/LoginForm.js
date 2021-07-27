@@ -1,10 +1,10 @@
 import { useState, useContext } from "react"
 import { useFormik } from "formik"
-import { FieldContainer, Container, RegisterBar, ErrorMsg } from "@/components/StyledComponents"
+import { FieldContainer, Container, RegisterBar, ErrorMsg } from "../../components/StyledComponents"
 import { useHistory } from "react-router-dom"
-import { CustomButton } from "@/components/Buttons/Button"
-import AuthContext from "@/Context/AuthContext"
-import api from "@/services/api"
+import { CustomButton } from "../../components/Buttons/Button"
+import AuthContext from "../../Context/AuthContext"
+import api from "../../services/api"
 import * as yup from "yup"
 
 

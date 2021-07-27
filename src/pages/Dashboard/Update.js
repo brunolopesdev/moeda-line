@@ -1,6 +1,6 @@
 import { useState } from "react"
-import Sidebar from "@/pages/Dashboard/sidebar/Sidebar"
-import Navbar from "@/pages/Dashboard/navbar/Navbar"
+import Sidebar from "../../pages/Dashboard/sidebar/Sidebar"
+import Navbar from "../../pages/Dashboard/navbar/Navbar"
 import EditTransaction from "./EditTransaction/EditTransaction"
 import "./index.css"
 

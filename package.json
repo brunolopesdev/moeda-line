@@ -7,7 +7,6 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "customize-cra": "^1.0.0",
     "dotenv": "^8.2.0",
     "formik": "^2.2.9",
     "jwt-decode": "^3.1.2",
@@ -15,7 +14,6 @@
     "prettier": "^2.3.2",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-app-rewired": "^2.1.8",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
@@ -30,12 +28,12 @@
     "@material-ui/icons": "^4.11.2"
   },
   "scripts": {
-    "start": "DISABLE_ESLINT_PLUGIN=true react-app-rewired start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-app-rewired build",
-    "test": "DISABLE_ESLINT_PLUGIN=true react-app-rewired test --env=jsdom",
-    "eject": "react-scripts eject"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "dev": "nodemon src/index.js"
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",
@@ -47,5 +45,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "react-app-rewired": "^2.1.8"
   }
 }

@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from "react"
-import api from "@/services/api"
+import api from "../services/api"
 import jwt_decode from "jwt-decode"
 import { useHistory } from "react-router-dom"
 
@@ -8,7 +8,7 @@ const AuthContext = createContext()
 function AuthContextProvider(props) {
 
 	const history = useHistory()
-	
+
 	const [loggedIn, setLoggedIn] = useState(undefined)
 	const [data, setData] = useState()
 	const [userName, setUserName] = useState("")
@@ -18,14 +18,14 @@ function AuthContextProvider(props) {
 	const [totalCategories, setTotalCategories] = useState("")
 	const [totalTransacoes, setTotalTransacoes] = useState("")
 	const [lastTransaction, setLastTransaction] = useState([])
-	
-	
+
+
 	// update
-	async function updateTransaction(id){
+	async function updateTransaction(id) {
 		console.log(id)
 		history.push(`/update/${id}`)
 	}
-	
+
 	// deletar transação
 	async function deleteTransaction(id) {
 		await api.delete(`/delete/${id}`)

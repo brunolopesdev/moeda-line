@@ -1,7 +1,7 @@
-import Icon1 from "@/assets/analytics.svg"
-import Icon2 from "@/assets/personalSettings.svg"
-import Icon3 from "@/assets/pitching.svg"
-import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP, ServicesSpan } from '@/components/StyledComponents'
+import Icon1 from "../../assets/analytics.svg"
+import Icon2 from "../../assets/personalSettings.svg"
+import Icon3 from "../../assets/pitching.svg"
+import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, ServicesH2, ServicesP, ServicesSpan } from '../../components/StyledComponents'
 
 const Services = () => {
   return (

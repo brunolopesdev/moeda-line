@@ -1,10 +1,10 @@
 import { useFormik } from "formik"
 import { useHistory } from "react-router-dom"
 import { useState, useContext } from "react"
-import { FieldContainer, MeuBotao, EventoContainer, ErrorMsg, SucessMsg, Bar, } from "@/components/StyledComponents"
-import api from "@/services/api"
-import AddIcon from "@/assets/add.svg"
-import AuthContext from "@/Context/AuthContext"
+import { FieldContainer, MeuBotao, EventoContainer, ErrorMsg, SucessMsg, Bar, } from "../../../components/StyledComponents"
+import api from "../../../services/api"
+import AddIcon from "../../../assets/add.svg"
+import AuthContext from "../../../Context/AuthContext"
 
 const AddTransaction = () => {
   const history = useHistory()

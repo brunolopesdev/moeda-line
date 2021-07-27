@@ -1,7 +1,7 @@
-import AuthContext from "@/Context/AuthContext";
-import AddTransactionModal from "@/pages/Dashboard/AddTransaction/AddTransactionModal"
+import AuthContext from "../../Context/AuthContext";
+import AddTransactionModal from "../../pages/Dashboard/AddTransaction/AddTransactionModal"
 import { Link } from "react-router-dom"
-import { useGetTransactions } from "@/hooks"
+import { useGetTransactions } from "../../hooks"
 import { useContext } from "react";
 import "./style.css"
 

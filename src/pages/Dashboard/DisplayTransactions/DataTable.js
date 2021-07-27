@@ -7,8 +7,8 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import AuthContext from '@/Context/AuthContext';
-import EditTransaction from '@/pages/Dashboard/EditTransaction/EditTransaction';
+import AuthContext from '../../../Context/AuthContext';
+import EditTransaction from '../../../pages/Dashboard/EditTransaction/EditTransaction';
 
 const useStyles = makeStyles({
 	table: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles({
 });
 
 
-export default function DataTable({toggle, open}) {
+export default function DataTable({ toggle, open }) {
 	const classes = useStyles();
 
 	const { data, deleteTransaction } = useContext(AuthContext)
@@ -51,16 +51,16 @@ export default function DataTable({toggle, open}) {
 							<TableCell align="right"><a onClick={() => deleteTransaction(data.id)} style={{ cursor: "pointer", color: "#3ea175", paddingRight: "10px" }} ><i className="fa fa-trash-alt"></i></a>
 								<a style={{ cursor: "pointer", color: "#35a4ba" }}>
 									<EditTransaction
-									key={data.id}
-									id={data.id}
-									valor={data.valor}
-									tipo={data.tipo}
-									moeda={data.moeda}
-									categoria={data.categoria}
-									descricao={data.descricao}
+										key={data.id}
+										id={data.id}
+										valor={data.valor}
+										tipo={data.tipo}
+										moeda={data.moeda}
+										categoria={data.categoria}
+										descricao={data.descricao}
 									/>
-									</a></TableCell>
-								{/* <Link to={`edit/${data.id}`}><a onClick={toggle} style={{ cursor: "pointer", color: "#35a4ba" }}><i className="fa fa-edit"></i></a></Link>
+								</a></TableCell>
+							{/* <Link to={`edit/${data.id}`}><a onClick={toggle} style={{ cursor: "pointer", color: "#35a4ba" }}><i className="fa fa-edit"></i></a></Link>
 							</TableCell> */}
 						</TableRow>
 					))}

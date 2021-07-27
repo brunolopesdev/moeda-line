@@ -1,26 +1,26 @@
-import React, { useState} from "react"
+import React, { useState } from "react"
 import { useFormik } from "formik"
 import { useHistory, useParams, withRouter } from 'react-router-dom';
-import { Bar, Container, ErrorMsg, FieldContainer, MeuBotao, SucessMsg } from '@/components/StyledComponents';
-import api from "@/services/api"
+import { Bar, Container, ErrorMsg, FieldContainer, MeuBotao, SucessMsg } from '../../../components/StyledComponents';
+import api from "../../../services/api"
 
 const EditTransaction = (props) => {
 
   const history = useHistory()
   const [error, setError] = useState(null)
   const [sucess, setSucess] = useState(null)
-  
+
   const onSubmit = async (values) => {
     const { ...data } = values
     let id = props.match.params.id
 
     const response = await api.put(`transaction/update/${id}`, data)
-    .catch((err) => {
-      if (err && err.response) {
-        setError(err.response.data.message)
-        setSucess(null)
-      }
-    })
+      .catch((err) => {
+        if (err && err.response) {
+          setError(err.response.data.message)
+          setSucess(null)
+        }
+      })
     if (response && response.data) {
       setError(null)
       setSucess(response.data.message)
@@ -28,9 +28,9 @@ const EditTransaction = (props) => {
       window.location.reload()
       formik.resetForm()
     }
-    
+
   }
-  
+
   const formik = useFormik({
     initialValues: { tipo: "", valor: "", categoria: "", moeda: "", descricao: "" },
     validateOnBlur: true,
@@ -41,12 +41,12 @@ const EditTransaction = (props) => {
   return (
 
     <main>
-      
-    <>
-          {sucess ? <Bar><SucessMsg>{sucess ? sucess : ""}</SucessMsg></Bar> : ""}
-          {error ? <Bar><ErrorMsg>{error ? error : ""}</ErrorMsg></Bar> : ""}
 
-          <form onSubmit={formik.handleSubmit}>
+      <>
+        {sucess ? <Bar><SucessMsg>{sucess ? sucess : ""}</SucessMsg></Bar> : ""}
+        {error ? <Bar><ErrorMsg>{error ? error : ""}</ErrorMsg></Bar> : ""}
+
+        <form onSubmit={formik.handleSubmit}>
 
           <FieldContainer>
             <label>Descrição</label>
@@ -148,7 +148,7 @@ const EditTransaction = (props) => {
 
           <MeuBotao type="submit">Enviar</MeuBotao>
         </form>
-        </>
+      </>
     </main>
   );
 }

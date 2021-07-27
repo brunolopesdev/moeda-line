@@ -1,9 +1,9 @@
 import { Route, Redirect } from 'react-router-dom';
 import { useContext, useState } from 'react';
-import AuthContext from '@/Context/AuthContext';
-import Navbar from "@/components/Navbar/Navbar"
-import Sidebar from '@/components/Navbar/Sidebar';
-import Footer from '@/components/Footer/Footer';
+import AuthContext from '../Context/AuthContext';
+import Navbar from "../components/Navbar/Navbar"
+import Sidebar from '../components/Navbar/Sidebar';
+import Footer from '../components/Footer/Footer';
 
 const PublicRoute = ({ component: Component, restricted, ...rest }, props) => {
 

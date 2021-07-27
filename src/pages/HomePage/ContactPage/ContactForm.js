@@ -1,13 +1,13 @@
 import "./ContactPage.css";
-import { Container } from "@/components/StyledComponents"
-import { CustomButton } from "@/components/Buttons/Button";
-import contact from "@/assets/contact.svg"
+import { Container } from "../../../components/StyledComponents"
+import { CustomButton } from "../../../components/Buttons/Button";
+import contact from "../../../assets/contact.svg"
 
 const ContactForm = () => {
 	return (
 
 		<Container>
-			
+
 			<img src={contact} width="20%" />
 
 			<h1 className="titulo">

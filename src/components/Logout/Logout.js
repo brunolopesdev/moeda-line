@@ -1,8 +1,8 @@
 import { useContext } from "react"
 import { useHistory } from "react-router-dom"
-import { LogoutBtn } from "@/components/StyledComponents"
-import AuthContext from "@/Context/AuthContext";
-import api from "@/services/api";
+import { LogoutBtn } from "../../components/StyledComponents"
+import AuthContext from "../../Context/AuthContext";
+import api from "../../services/api";
 
 
 

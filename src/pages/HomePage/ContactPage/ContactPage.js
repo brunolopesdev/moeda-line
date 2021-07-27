@@ -1,7 +1,7 @@
 import "./ContactPage.css";
-import ContactForm from "@/pages/HomePage/ContactPage/ContactForm";
-import { ContactWrapper } from "@/components/StyledComponents";
-import contact from "@/assets/contact.svg"
+import ContactForm from "../../../pages/HomePage/ContactPage/ContactForm";
+import { ContactWrapper } from "../../../components/StyledComponents";
+import contact from "../../../assets/contact.svg"
 
 
 const ContactPage = () => {
@@ -10,7 +10,7 @@ const ContactPage = () => {
     <ContactWrapper id="contact">
       <ContactForm />
     </ContactWrapper>
-    
+
   );
 };
 

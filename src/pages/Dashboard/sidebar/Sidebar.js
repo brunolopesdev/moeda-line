@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
-import logo from "@/assets/logo.png"
-import AddTransactionModal from "@/pages/Dashboard/AddTransaction/AddTransactionModal"
-import DisplayTransactions from "@/pages/Dashboard/DisplayTransactions/DisplayTransactions"
-import Logout from "@/components/Logout/Logout"
+import logo from "../../../assets/logo.png"
+import AddTransactionModal from "../../../pages/Dashboard/AddTransaction/AddTransactionModal"
+import DisplayTransactions from "../../../pages/Dashboard/DisplayTransactions/DisplayTransactions"
+import Logout from "../../../components/Logout/Logout"
 import "./Sidebar.css"
 
 

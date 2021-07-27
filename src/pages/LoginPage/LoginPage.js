@@ -1,5 +1,5 @@
-import { LoginWrapper } from "@/components/StyledComponents";
-import LoginForm from "@/pages/LoginPage/LoginForm"
+import { LoginWrapper } from "../../components/StyledComponents";
+import LoginForm from "../../pages/LoginPage/LoginForm"
 import "./LoginPage.css"
 
 const LoginPage = () => {

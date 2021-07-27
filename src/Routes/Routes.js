@@ -1,12 +1,12 @@
 import { Route, Switch } from 'react-router-dom';
-import Home from '@/pages/HomePage/Home';
-import RegisterPage from '@/pages/RegisterPage/RegisterPage';
-import LoginPage from '@/pages/LoginPage/LoginPage';
-import PrivateRoute from '@/Routes/PrivateRoute';
-import PublicRoute from '@/Routes/PublicRoute';
-import Dashboard from '@/pages/Dashboard/Dashboard';
-import Transactions from '@/pages/Dashboard/Transactions';
-import Update from '@/pages/Dashboard/Update';
+import Home from '../pages/HomePage/Home';
+import RegisterPage from '../pages/RegisterPage/RegisterPage';
+import LoginPage from '../pages/LoginPage/LoginPage';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
+import Dashboard from '../pages/Dashboard/Dashboard';
+import Transactions from '../pages/Dashboard/Transactions';
+import Update from '../pages/Dashboard/Update';
 
 
 

@@ -1,4 +1,4 @@
-import { MeuBotao } from '@/components/StyledComponents';
+import { MeuBotao } from '../../components/StyledComponents';
 
 export const CustomButton = ({ children }) => {
    return (

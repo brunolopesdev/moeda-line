@@ -6,14 +6,14 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import { useFormik } from 'formik';
-import { FieldContainer, MeuBotao } from '@/components/StyledComponents';
-import AuthContext from '@/Context/AuthContext';
-import api from '@/services/api';
+import { FieldContainer, MeuBotao } from '../../../components/StyledComponents';
+import AuthContext from '../../../Context/AuthContext';
+import api from '../../../services/api';
 
 export default function UserConfig() {
 
   const { userId } = useContext(AuthContext)
-  
+
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -30,12 +30,12 @@ export default function UserConfig() {
     const response = await api.put(`users/update`, data)
       .catch((err) => {
         if (err && err.response) {
-          
+
 
         }
       })
     if (response && response.data) {
-      
+
       formik.resetForm()
     }
 
@@ -51,7 +51,7 @@ export default function UserConfig() {
   return (
     <div>
       <Button variant="outlined" onClick={handleClickOpen}>
-      <i className="fa fa-cog" style={{padding: "5px"}}></i>Configurações
+        <i className="fa fa-cog" style={{ padding: "5px" }}></i>Configurações
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
         <DialogTitle id="form-dialog-title">Dados do usuário</DialogTitle>
@@ -61,8 +61,8 @@ export default function UserConfig() {
           </DialogContentText>
           <form onSubmit={formik.handleSubmit}>
 
-          <FieldContainer>
-              
+            <FieldContainer>
+
               <input
                 type="text"
                 placeholder={userId}
@@ -73,7 +73,7 @@ export default function UserConfig() {
                 onBlur={formik.handleBlur}
               />
             </FieldContainer>
-            
+
             <FieldContainer>
               <label>Novo Nome</label>
               <input

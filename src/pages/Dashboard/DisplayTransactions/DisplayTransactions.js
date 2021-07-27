@@ -8,9 +8,9 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import CloseIcon from '@material-ui/icons/Close';
 import Slide from '@material-ui/core/Slide';
-import DataTable from "@/pages/Dashboard/DisplayTransactions/DataTable"
-import AddTransactionModal from "@/pages/Dashboard/AddTransaction/AddTransactionModal"
-import AuthContext from '@/Context/AuthContext';
+import DataTable from "../../../pages/Dashboard/DisplayTransactions/DataTable"
+import AddTransactionModal from "../../../pages/Dashboard/AddTransaction/AddTransactionModal"
+import AuthContext from '../../../Context/AuthContext';
 
 const useStyles = makeStyles((theme) => ({
   appBar: {
@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     color: "#242424",
   },
-  
+
 }));
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -30,7 +30,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 export default function DisplayTransactions() {
-  const {userName} = useContext(AuthContext)
+  const { userName } = useContext(AuthContext)
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -45,33 +45,33 @@ export default function DisplayTransactions() {
 
   const toggle = () => {
     setOpen(!open)
- }
+  }
 
   return (
     <>
-      <a style={{cursor: 'pointer'}} onClick={handleClickOpen}>
+      <a style={{ cursor: 'pointer' }} onClick={handleClickOpen}>
         Trasações
       </a>
       <Dialog fullScreen open={open} onClose={handleClose} TransitionComponent={Transition}>
         <AppBar className={classes.appBar}>
           <Toolbar>
-            <IconButton edge="start" style={{color: "#242424"}} onClick={handleClose} aria-label="close">
+            <IconButton edge="start" style={{ color: "#242424" }} onClick={handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
               Essas são as suas transações, {userName}
             </Typography>
-            <Button  style={{color: "#242424"}}>
+            <Button style={{ color: "#242424" }}>
 
               <AddTransactionModal />
-            
+
             </Button>
-            <Button  style={{color: "#242424"}} onClick={handleClose}>
+            <Button style={{ color: "#242424" }} onClick={handleClose}>
               Fechar
             </Button>
           </Toolbar>
         </AppBar>
-        <DataTable toggle={toggle} open={open}/>
+        <DataTable toggle={toggle} open={open} />
       </Dialog>
     </>
   );

@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import UserConfig from "@/pages/Dashboard/navbar/UserConfig";
+import UserConfig from "../../../pages/Dashboard/navbar/UserConfig";
 import AddTransactionModal from "../AddTransaction/AddTransactionModal";
 import { Button } from "@material-ui/core";
 
@@ -20,9 +20,9 @@ const Navbar = ({ openSideBar, sideBarOpen }) => {
 
       <div className="navbar__right">
         <AddTransactionModal>
-        <Button variant="outlined" style={{marginRight: "5px"}}>
-      <i className="fa fa-plus" style={{padding: "5px"}}></i>Nova Transação
-      </Button>
+          <Button variant="outlined" style={{ marginRight: "5px" }}>
+            <i className="fa fa-plus" style={{ padding: "5px" }}></i>Nova Transação
+          </Button>
         </AddTransactionModal>
         <UserConfig />
 
